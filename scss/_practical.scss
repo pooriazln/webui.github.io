@@ -1,0 +1,251 @@
+@import "variabels";
+@import "mixins";
+.lato {
+  &-black {
+    font-family: "Lato-Black";
+  }
+  &-bold {
+    font-family: "Lato-Bold";
+  }
+  &-light {
+    font-family: "Lato-Light";
+  }
+  &-regular {
+    font-family: "Lato-Regular";
+  }
+}
+.h {
+  &-100 {
+    height: 100% !important;
+  }
+}
+.poppins-regular {
+  font-family: "Poppins-Regular";
+}
+.roboto {
+  &-medium {
+    font-family: "Roboto-Medium";
+  }
+  &-light {
+    font-family: "Roboto-Light";
+  }
+  &-regular {
+    font-family: "roboto-regular";
+  }
+  &-thin {
+    font-family: "Roboto-Thin";
+  }
+}
+.btn {
+  padding: 0.8rem 2.5rem;
+  border-radius: 35px;
+  border: 2px solid transparent;
+  display: inline-block;
+  cursor: pointer;
+  @include transition(all, 0.5s);
+  &-primary {
+    background-color: $primary-color;
+    color: #fff;
+    text-transform: capitalize;
+    &:hover {
+      box-shadow: 0px 0px 10px $primary-color;
+    }
+  }
+  &-orenge {
+    background-color: $secondary-color;
+    color: #fff;
+    text-transform: uppercase;
+    &:hover {
+      box-shadow: 0px 0px 10px $secondary-color;
+    }
+  }
+  &-outline-light {
+    border-color: #fff;
+    color: #fff;
+    &:hover {
+      background-color: #fff;
+      color: $dark-blue-color;
+    }
+  }
+}
+.text {
+  &-primary {
+    color: $primary-color;
+  }
+  &-secondary {
+    color: $primary-color;
+  }
+  &-light {
+    color: $light-color;
+  }
+  &-dark {
+    color: $dark-color;
+  }
+  &-dark-blue {
+    color: $dark-blue-color;
+  }
+  &-uppercase {
+    text-transform: uppercase;
+  }
+  &-capitalize {
+    text-transform: capitalize;
+  }
+}
+.w {
+  &-100 {
+    width: 100%;
+  }
+  &-75 {
+    width: 75%;
+  }
+  &-50 {
+    width: 50%;
+  }
+  &-25 {
+    width: 25%;
+  }
+  &-0 {
+    width: 0%;
+  }
+}
+.m {
+  &-auto {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &r {
+    &-auto {
+      margin-right: auto !important;
+    }
+  }
+  &l {
+    &-0 {
+      margin-left: 0 !important;
+    }
+    &-auto {
+      margin-left: auto !important;
+    }
+  }
+  &b {
+    &-2 {
+      margin-bottom: 2rem;
+    }
+  }
+  &t {
+    &-2 {
+      margin-top: 2rem !important;
+    }
+  }
+}
+.justify-content {
+  &-center {
+    @include justify-content-center;
+  }
+  &-between {
+    @include justify-content-space-between;
+  }
+}
+.flex-direction-col {
+  @include flex-direction-column;
+}
+.align-items {
+  &-center {
+    @include align-items-center;
+  }
+}
+.d {
+  &-flex {
+    @include d-flex;
+  }
+  &-none {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: $xl) {
+  .m-xl {
+    &-auto {
+      margin-right: auto !important;
+      margin-left: auto !important;
+    }
+    &-r {
+      &-auto {
+        margin-right: auto !important;
+      }
+      &-0 {
+        margin-right: 0 !important;
+      }
+    }
+    &-l {
+      &-0 {
+        margin-left: 0 !important;
+      }
+      &-auto {
+        margin-left: auto !important;
+      }
+    }
+    &-b {
+      &-2 {
+        margin-bottom: 2rem !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $lg) {
+  .m-lg {
+    &-0 {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    &-auto {
+      margin-right: auto !important;
+      margin-left: auto !important;
+    }
+    &-r {
+      &-auto {
+        margin-right: auto !important;
+      }
+    }
+    &-l {
+      &-0 {
+        margin-left: 0 !important;
+      }
+      &-auto {
+        margin-left: auto !important;
+      }
+    }
+    &-b {
+      &-2 {
+        margin-bottom: 2rem !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: $md) {
+  .m-md {
+    &-auto {
+      margin-right: auto !important;
+      margin-left: auto !important;
+    }
+    &-r {
+      &-auto {
+        margin-right: auto !important;
+      }
+    }
+    &-l {
+      &-0 {
+        margin-left: 0 !important;
+      }
+      &-auto {
+        margin-left: auto !important;
+      }
+    }
+    &-b {
+      &-2 {
+        margin-bottom: 2rem !important;
+      }
+    }
+  }
+}

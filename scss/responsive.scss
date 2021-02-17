@@ -1,0 +1,337 @@
+@import "variabels";
+@import "mixins";
+@media only screen and (max-width: $xl) {
+  // Header
+  .header {
+    height: 992px;
+    .navbar {
+      &__menu {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        @include flex-direction-column;
+        @include align-items-center;
+        width: 65%;
+        left: -100%;
+        top: 0;
+        bottom: 0;
+        position: fixed;
+        background: $primary-gradient-color;
+        z-index: 10000;
+        @include transition(all, 0.5s);
+        &__item {
+          opacity: 0;
+        }
+      }
+      .logo {
+        order: 0;
+      }
+      &__burger {
+        display: block;
+        order: 2;
+      }
+      .times {
+        .navbar__burger__line-1 {
+          transform: rotate(45deg) translate(6px, 6px);
+        }
+        .navbar__burger__line-2 {
+          transform: translateX(-20px);
+          opacity: 0;
+        }
+        .navbar__burger__line-3 {
+          transform: rotate(-45deg) translate(6px, -7px);
+        }
+      }
+    }
+    .expand .navbar__menu {
+      left: 0;
+    }
+    .btn-orenge {
+      order: 3;
+    }
+    &__title {
+      font-size: 2rem;
+      width: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__content {
+      @include flex-direction-column;
+      &__img {
+        width: 70%;
+        margin-bottom: 2rem;
+        order: 0;
+        img {
+          width: 100%;
+        }
+      }
+      &__desc {
+        width: 100%;
+        text-align: center;
+        order: 1;
+      }
+    }
+    &__btn {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2.5rem;
+    }
+  }
+  // main
+  .main {
+    &__portfolio {
+      &__tabs {
+        padding-left: 0rem;
+        &__title {
+          font-size: 1rem;
+          text-align: center;
+          margin-bottom: 0.5rem;
+        }
+        &__subtitle {
+          font-size: 0.8rem;
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+        &__menu {
+          @include flex-direction-row;
+          margin-bottom: 2rem;
+        }
+        &__item {
+          &:first-child {
+            margin-left: auto;
+          }
+          &:last-child {
+            margin-right: auto;
+          }
+          margin-bottom: 0rem;
+          margin-right: 0.5rem;
+          margin-left: 0.5rem;
+          font-size: 0.7rem;
+          text-align: center;
+        }
+      }
+      &__tab-content {
+        padding-left: 0rem;
+        margin-left: 0rem;
+        &__img {
+          margin: 0rem;
+          margin-bottom: 1rem;
+          padding: 0.5rem;
+        }
+      }
+    }
+    &__review {
+      &__title {
+        font-size: 1.5rem;
+      }
+      &__subtitle {
+        font-size: 0.7rem;
+      }
+      &__images {
+        .img-1 {
+          display: none;
+        }
+        .img-2 {
+          display: none;
+        }
+        .img-3 {
+          display: none;
+        }
+        .img-4 {
+          display: none;
+        }
+        .img-5 {
+          display: none;
+        }
+        .img-6 {
+          display: none;
+        }
+        .img-7 {
+          display: none;
+        }
+        .img-8 {
+          display: none;
+        }
+        .img-9 {
+          display: none;
+        }
+        .img-10 {
+          display: none;
+        }
+      }
+      &__img-center {
+        margin-top: -20rem;
+        padding-bottom: 8rem;
+        .img-11 {
+          width: 130px;
+          height: 130px;
+        }
+        &__name {
+          font-size: 0.9rem;
+        }
+        &__title {
+          font-size: 0.8rem;
+        }
+      }
+      &__btn {
+        margin-left: 0rem;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .workflow {
+      &__title {
+        font-size: 1.3rem;
+        margin-top: 3rem;
+      }
+      &__subtitle {
+        font-size: 1rem;
+      }
+      &__item {
+        text-align: center;
+        padding: 1rem;
+        margin: 0rem;
+        margin-bottom: 1rem;
+        flex: 0 0 100%;
+        @include flex-direction-column;
+        height: 100%;
+      }
+      &__number {
+        margin: 0;
+        margin-bottom: 1rem;
+      }
+    }
+    .blog {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+      &__card {
+        &:hover {
+          box-shadow: 0 20px 40px rgba($color: #000000, $alpha: 0.2);
+        }
+        &__title {
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+        }
+        &__subtitle {
+          font-size: 0.8rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: $md) {
+  // Header
+  .header {
+    height: 768px;
+    &__title {
+      font-size: 1.5rem;
+    }
+    &__bg {
+      min-width: 480px;
+    }
+  }
+  // Main
+  .main {
+    &__padding {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    &__header {
+      &__title {
+        font-size: 1.5rem;
+      }
+      &__subtitle {
+        font-size: 0.7rem;
+      }
+    }
+    &__services {
+      .card {
+        &__body{
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+        }
+        &__title {
+          font-size: 1rem;
+        }
+        &__subtitle {
+          font-size: 0.8rem;
+        }
+      }
+    }
+    &__product {
+      text-align: center;
+      &__desc {
+        max-width: auto;
+        margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    &__review {
+      height: 900px;
+      &__img-center {
+        border-color: transparent;
+        .circle {
+          font-size: 1rem;
+        }
+        &__name {
+          font-size: 1rem;
+        }
+        &__title {
+          font-size: 0.9rem;
+        }
+      }
+      &__img-desc {
+        @include flex-direction-column;
+        margin-left: 0rem;
+        margin-top: -5rem;
+        &__subtitle {
+          font-size: 1.4rem;
+        }
+      }
+      &__btn {
+        margin-top: 3rem;
+      }
+    }
+    &__key-feature {
+      &__card {
+        &__title {
+          font-size: 1.5rem;
+        }
+        &__subtitle {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .clients {
+      @include flex-direction-column;
+      img {
+        width: 30%;
+        flex: 0 0 30%;
+      }
+    }
+  }
+  // Footer
+  .footer {
+    text-align: center;
+    .social {
+      &__item{
+        &:first-child{
+          margin-left: auto;
+        }
+        &:last-child{
+          margin-right: auto;
+        }
+      }
+    }
+    &__subtitle {
+      font-size: 1rem;
+    }
+    &__menu__title {
+      font-size: 1rem;
+    }
+    &__item {
+      font-size: 1rem;
+    }
+  }
+}
